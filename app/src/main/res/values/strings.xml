@@ -1,17 +1,19 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">UF2 Application</string>
     <string name="layout_1">Go to layout 1</string>
     <string name="layout_2">Go to layout 2</string>
     <string name="back">Go back</string>
     <string name="option">Please, choose an option</string>
 
-    <string name="welcome">Wellcome</string>
+    <string name="welcome">Welcome</string>
     <string name="welcome_1">activity 1</string>
     <string name="welcome_2">activity 2</string>
 
     <string name="toast1">You are currently in the activity 1</string>
     <string name="toast2">You are currently in the activity 2</string>
 
+    <string name="playing">Playing…</string>
+    <string name="stop">Music stopped</string>
 
     <string name="tableCreate">Create table</string>
     <string name="tableInsert">Insert data</string>

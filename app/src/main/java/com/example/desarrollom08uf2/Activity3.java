@@ -13,13 +13,31 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
-        Toast.makeText(this,R.string.toast2,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,R.string.toast2,Toast.LENGTH_SHORT).show();//Aviso de pantalla
 
     }
     public void goActivityMain(View view) {
         Intent intent = new Intent(Activity3.this,MainActivity.class);
-        startActivity(intent);
+        startActivity(intent);//Volver a la principal y cerrar esta
         finish();//cerrar esta pantalla
 
+    }
+
+    public void freeze15(View view) { //SERVICIO DE BLOQUEO
+       try{
+            Thread.sleep(150000);//Bloqueamos 150 segundos
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void playMusic(View view) {//Reproducir musica
+        Intent intent = new Intent(this,MyService.class);
+        startService(intent);
+    }
+
+    public void stopMusic(View view) {//Parar musica
+        Intent intent = new Intent(this,MyService.class);
+        stopService(intent);
     }
 }

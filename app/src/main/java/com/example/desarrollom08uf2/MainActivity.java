@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goActivity1(View view) {
+    public void goActivity1(View view) {//Ir activity 1
         Intent intent = new Intent(MainActivity.this,Activity2.class);
         startActivity(intent);
         finish();//cerrar esta pantalla
     }
 
-    public void goActivity2(View view) {
+    public void goActivity2(View view) {//Ir activity 2
         Intent intent = new Intent(MainActivity.this,Activity3.class);
         startActivity(intent);
         finish();//cerrar esta pantalla

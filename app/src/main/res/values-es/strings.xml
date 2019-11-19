@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">DesarrolloM08UF2</string>
+        <string name="app_name">Aplicación UF2</string>
         <string name="layout_1">Ir a layout 1</string>
         <string name="layout_2">Ir a layout 2</string>
         <string name="back">Atrás</string>
@@ -12,6 +12,9 @@
 
         <string name="toast1">Estas en la activity 1</string>
         <string name="toast2">Estas en la activity 2</string>
+
+        <string name="playing">Reproduciendo…</string>
+        <string name="stop">Música detenida</string>
 
         <string name="tableCreate">Crear tabla</string>
         <string name="tableInsert">Insertar datos</string>

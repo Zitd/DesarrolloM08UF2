@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">DesarrolloM08UF2</string>
+        <string name="layout_1">Ir a layout 1</string>
+        <string name="layout_2">Ir a layout 2</string>
+        <string name="back">Atrás</string>
+        <string name="option">Por favor, elige una opcion</string>
+
+        <string name="welcome">Bienvenido</string>
+        <string name="welcome_1">Estas en la act 1 rn</string>
+        <string name="welcome_2">Estas en la act 2 rn</string>
+
+        <string name="toast1">Estas en la activity 1</string>
+        <string name="toast2">Estas en la activity 2</string>
+
+        <string name="tableCreate">Crear tabla</string>
+        <string name="tableInsert">Insertar datos</string>
+        <string name="tableSelect">Ver tabla</string>
+
+        <string name="musicPlay">Play música</string>
+        <string name="musicStop">Parar música</string>
+        <string name="musicFreeze">Congelar la app</string>
+</resources>

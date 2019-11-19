@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="layout_1">Go to layout 1</string>
+    <string name="layout_2">Go to layout 2</string>
+    <string name="back">Go back</string>
+    <string name="option">Please, choose an option</string>
+
+    <string name="welcome">Wellcome</string>
+    <string name="welcome_1">activity 1</string>
+    <string name="welcome_2">activity 2</string>
+
+    <string name="toast1">You are currently in the activity 1</string>
+    <string name="toast2">You are currently in the activity 2</string>
+
+
+    <string name="tableCreate">Create table</string>
+    <string name="tableInsert">Insert data</string>
+    <string name="tableSelect">Consult data</string>
+
+    <string name="musicPlay">Play music</string>
+    <string name="musicStop">Stop music</string>
+    <string name="musicFreeze">Freeze the app</string>
+</resources>

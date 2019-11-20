@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class Activity3 extends AppCompatActivity {
     MyService myService;
     boolean isBound = false;
-Button b1,b2,b3;
+Button b1,b2,b3,b4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ Button b1,b2,b3;
         b1= findViewById(R.id.button7);
         b2= findViewById(R.id.button8);
         b3= findViewById(R.id.button9);
+        b4= findViewById(R.id.button4);
         Toast.makeText(this,R.string.toast2,Toast.LENGTH_SHORT).show();//Aviso de pantalla
 
     }
@@ -53,6 +54,9 @@ Button b1,b2,b3;
         b1.setVisibility(View.VISIBLE);//Solo se muetran los botones mientras el servicio esta activo
         b2.setVisibility(View.VISIBLE);
         b3.setVisibility(View.VISIBLE);
+        b4.setVisibility(View.VISIBLE);
+
+
     }
 
     public void serviceStop(View v) {
@@ -62,6 +66,8 @@ Button b1,b2,b3;
         b1.setVisibility(View.INVISIBLE);//Solo se muetran los botones mientras el servicio esta activo
         b2.setVisibility(View.INVISIBLE);
         b3.setVisibility(View.INVISIBLE);
+        b4.setVisibility(View.INVISIBLE);
+
     }
 
     private ServiceConnection serviceConnection = new ServiceConnection() {//Conectar con el servicio

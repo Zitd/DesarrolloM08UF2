@@ -33,4 +33,7 @@
         <string name="tableCol2">Texto Col.2</string>
         <string name="tableCol3">Numero Col.3</string>
 
+        <string name="insertOK">Datos añadidos correctamente</string>
+        <string name="insertNOK">Error: Los datos no se han podido añadir</string>
+
 </resources>

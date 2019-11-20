@@ -32,4 +32,8 @@
     <string name="tableCol2">Text Col.2</string>
     <string name="tableCol3">Number Col.3</string>
 
+    <string name="insertOK">Data added correctly</string>
+    <string name="insertNOK">Error: Data has not been added</string>
+
+
 </resources>

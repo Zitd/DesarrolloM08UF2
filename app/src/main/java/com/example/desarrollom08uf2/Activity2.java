@@ -82,7 +82,7 @@ public class Activity2 extends AppCompatActivity {
                                 editNota.getText().toString() );
 
                         if(isInserted){
-                            Toast.makeText(Activity2.this, "Datos insertadosdsds",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Activity2.this, R.string.insertOK,Toast.LENGTH_SHORT).show();
                             btnSelect.setVisibility(View.VISIBLE);//Damos la posibilidad de ver los datos
 
                             //Si se inserta correctamente vaciamos los editText
@@ -91,7 +91,7 @@ public class Activity2 extends AppCompatActivity {
                             editNota.setText(null);
                             }
                         else
-                            Toast.makeText(Activity2.this, "Datos NOI insertadosdsds",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Activity2.this, R.string.insertNOK,Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -117,7 +117,7 @@ public class Activity2 extends AppCompatActivity {
                             buffer.append(BD.COL_4).append(" :").append(result.getString(3)).append("\n\n");
                         }
                         //Mostrar todos los datos
-                        mostrarMensaje("Datos",buffer.toString());
+                        mostrarMensaje(BD.TABLE_NAME,buffer.toString());
                     }
                 }
         );

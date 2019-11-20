@@ -19,7 +19,11 @@
     <string name="tableInsert">Insert data</string>
     <string name="tableSelect">Consult data</string>
 
-    <string name="musicPlay">Play music</string>
-    <string name="musicStop">Stop music</string>
-    <string name="musicFreeze">Freeze the app</string>
+    <string name="musicPlay">Play</string>
+    <string name="musicStop">Stop</string>
+    <string name="musicFreeze">Freeze</string>
+
+    <string name="serviceStart">Start service</string>
+    <string name="serviceStop">Stop service</string>
+    <string name="serviceStarted">The service has started</string>
 </resources>

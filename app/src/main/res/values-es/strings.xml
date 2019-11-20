@@ -29,13 +29,8 @@
         <string name="serviceStarted">El servicio se ha iniciado</string>
 
         <string name="tableName">Nombre tabla</string>
-        <string name="tableCol1">Columna 1 </string>
-        <string name="tableCol2">Columna 2</string>
-        <string name="tableCol3">Columna 3</string>
-
-        <string name="tableText">Texto</string>
-        <string name="tableNum">Numero</string>
-
-
+        <string name="tableCol1">Texto Col.1 </string>
+        <string name="tableCol2">Texto Col.2</string>
+        <string name="tableCol3">Numero Col.3</string>
 
 </resources>

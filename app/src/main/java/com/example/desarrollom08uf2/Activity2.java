@@ -67,8 +67,9 @@ public class Activity2 extends AppCompatActivity {
 
 
 
-        btnInsert.setVisibility(View.INVISIBLE);
         btnInsert.setVisibility(View.VISIBLE);
+        btnCreate.setVisibility(View.INVISIBLE);
+
     }
 
     public void tableInsert() {
@@ -89,8 +90,6 @@ public class Activity2 extends AppCompatActivity {
                             editApellidos.setText(null);
                             editNota.setText(null);
                             }
-
-
                         else
                             Toast.makeText(Activity2.this, "Datos NOI insertadosdsds",Toast.LENGTH_SHORT).show();
                     }

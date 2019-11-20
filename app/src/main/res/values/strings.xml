@@ -28,12 +28,8 @@
     <string name="serviceStarted">The service has started</string>
 
     <string name="tableName">Table name</string>
-    <string name="tableCol1">Column 1</string>
-    <string name="tableCol2">Column 2</string>
-    <string name="tableCol3">Column 3</string>
-
-    <string name="tableText">Text</string>
-    <string name="tableNum">Number</string>
-
+    <string name="tableCol1">Text Col.1</string>
+    <string name="tableCol2">Text Col.2</string>
+    <string name="tableCol3">Number Col.3</string>
 
 </resources>

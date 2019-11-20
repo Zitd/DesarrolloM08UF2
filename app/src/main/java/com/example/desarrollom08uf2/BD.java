@@ -10,25 +10,36 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BD extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Alumno.db";
     public static final String TABLE_NAME = "tablaAlumno";
-    public static final String COL_1 = "ID";
-    public static final String COL_2 = "Nombre";
-    public static final String COL_3 = "Apellido";
-    public static final String COL_4 = "Nota";
+    public static  String COL_1 = "ID";
+    public static  String COL_2 = "Nombre";
+    public static  String COL_3 = "Apellido";
+    public static  String COL_4 = "Nota";
 
     public BD(Context context) {//Esto servira para crear la base de datos
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" ("+COL_1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-                +COL_2+" TEXT,"+COL_3+" TEXT,"+COL_4+" INTEGER)");
+
+/*
+        db.execSQL("create table tablaAlumno (ID INTEGER PRIMARY KEY AUTOINCREMENT,Nombre TEXT,Apellido TEXT,Nota INTEGER)");
+*/
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
-        onCreate(db);
+        createTable(TABLE_NAME,COL_1,COL_2,COL_3,COL_4);
+    }
+
+    public boolean createTable(String TABLE_NAME,String COL_1,String COL_2,String COL_3,String COL_4){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        db.execSQL("CREATE TABLE " + TABLE_NAME +" ("+COL_1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                +COL_2+" TEXT,"+COL_3+" TEXT,"+COL_4+" INTEGER)");
+
+        return true;
     }
 
     public boolean insertData(String nombre,String apellido, String nota){

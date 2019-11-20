@@ -53,9 +53,10 @@ public class MyService extends Service {
 
     @Override
     public void onDestroy() {//La terminamos bien
+        super.onDestroy();//aqui destruimos el servicio
         player.release();
         stopSelf();//Se para a si mismo
-        super.onDestroy();//aqui destruimos el servicio
+
 
     }
 

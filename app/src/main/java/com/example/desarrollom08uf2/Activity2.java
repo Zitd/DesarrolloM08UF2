@@ -13,9 +13,9 @@ import android.widget.Toast;
 
 public class Activity2 extends AppCompatActivity {
     BD myBd;
-    EditText editNombre, editApellidos,editNota;
-    TextView text1,text2,text3;
-    Button btnInsert,btnSelect;
+    EditText editNombre, editApellidos,editNota,editExtra;
+    TextView text1,text2,text3,text4;
+    Button btnInsert,btnSelect,btnCreate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +26,15 @@ public class Activity2 extends AppCompatActivity {
         editNombre = findViewById(R.id.editText);
         editApellidos = findViewById(R.id.editText2);
         editNota = findViewById(R.id.editText3);
+        editExtra= findViewById(R.id.editText4);
         btnInsert =  findViewById(R.id.button4);
         btnSelect = findViewById(R.id.button5);
+        btnCreate = findViewById(R.id.button3);
         text1= findViewById(R.id.textView3);
         text2= findViewById(R.id.textView4);
         text3= findViewById(R.id.textView5);
-        text1.setText(BD.COL_2);
-        text2.setText(BD.COL_3);
-        text3.setText(BD.COL_4);
+        text4= findViewById(R.id.textView7);
+
 
         tableInsert();
         tableConsult();
@@ -46,20 +47,27 @@ public class Activity2 extends AppCompatActivity {
     }
 
     public void tableCreate(View view) {
-        /*BD.TABLE_NAME = ;
-        BD.COL_2 = ;
-        BD.COL_3 = ;
-        BD.COL_4 = ;*/
-
+        //Recogemos los valores
+        BD.TABLE_NAME = editNombre.getText().toString();
+        BD.COL_2 = editApellidos.getText().toString();
+        BD.COL_3 = editNota.getText().toString();
+        BD.COL_4 = editExtra.getText().toString();
+        //Creamos la tabla
         myBd.createTable(BD.TABLE_NAME,BD.COL_1,BD.COL_2,BD.COL_3,BD.COL_4);
+        //Ocultamos lo que no sirve y mostramos lo que si
+        editExtra.setVisibility(View.INVISIBLE);
+        text4.setVisibility(View.INVISIBLE);
+        text1.setText(BD.COL_2);
+        text2.setText(BD.COL_3);
+        text3.setText(BD.COL_4);
+        //vaciamos los editText
+        editNombre.setText(null);
+        editApellidos.setText(null);
+        editNota.setText(null);
 
-        editNombre.setVisibility(View.VISIBLE);
-        editApellidos.setVisibility(View.VISIBLE);
-        editNota.setVisibility(View.VISIBLE);
-        text1.setVisibility(View.VISIBLE);
-        text2.setVisibility(View.VISIBLE);
-        text3.setVisibility(View.VISIBLE);
 
+
+        btnInsert.setVisibility(View.INVISIBLE);
         btnInsert.setVisibility(View.VISIBLE);
     }
 
@@ -75,6 +83,11 @@ public class Activity2 extends AppCompatActivity {
                         if(isInserted){
                             Toast.makeText(Activity2.this, "Datos insertadosdsds",Toast.LENGTH_SHORT).show();
                             btnSelect.setVisibility(View.VISIBLE);//Damos la posibilidad de ver los datos
+
+                            //Si se inserta correctamente vaciamos los editText
+                            editNombre.setText(null);
+                            editApellidos.setText(null);
+                            editNota.setText(null);
                             }
 
 

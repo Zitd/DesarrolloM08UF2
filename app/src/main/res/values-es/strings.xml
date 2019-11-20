@@ -28,5 +28,14 @@
         <string name="serviceStop">Parar servicio</string>
         <string name="serviceStarted">El servicio se ha iniciado</string>
 
+        <string name="tableName">Nombre tabla</string>
+        <string name="tableCol1">Columna 1 </string>
+        <string name="tableCol2">Columna 2</string>
+        <string name="tableCol3">Columna 3</string>
+
+        <string name="tableText">Texto</string>
+        <string name="tableNum">Numero</string>
+
+
 
 </resources>

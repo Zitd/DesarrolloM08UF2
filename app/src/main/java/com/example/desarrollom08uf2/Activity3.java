@@ -28,6 +28,7 @@ Button b1,b2,b3,b4;
         Toast.makeText(this,R.string.toast2,Toast.LENGTH_SHORT).show();//Aviso de pantalla
 
     }
+
     public void goActivityMain(View view) {//Boton de back
         Intent intent = new Intent(Activity3.this,MainActivity.class);
         startActivity(intent);//Volver a la principal y cerrar esta
@@ -37,17 +38,16 @@ Button b1,b2,b3,b4;
 
     public void playMusic(View view) {//empezar musica
         myService.musicPlayer();
-    }
-
+    }//Reproducir musica
     public void stopMusic(View view) {//Parar musica
         myService.musicStopper();
-    }
-
+    }//Parar musica
     public void freeze15(View view) { //SERVICIO DE BLOQUEO
         myService.musicFreeze();
-    }
+    }    //Congelar app
 
-    public void serviceStart(View v) {
+
+    public void serviceStart(View v) {//Empezar el servicio
         Intent intent = new Intent(this,MyService.class);
         startService(intent);
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
@@ -59,7 +59,7 @@ Button b1,b2,b3,b4;
 
     }
 
-    public void serviceStop(View v) {
+    public void serviceStop(View v) {//Parar servicio
         Intent intent = new Intent(this,MyService.class);
         myService.musicStopper();//Paramos la musica
         stopService(intent);

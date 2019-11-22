@@ -45,31 +45,59 @@ public class Activity2 extends AppCompatActivity {
         startActivity(intent);
         finish();//cerrar esta pantalla
     }
+    public static boolean isNotNumeric(String strNum1) {//Comprobador de si la string es solo numeros
+        try {
+            double d = Double.parseDouble(strNum1);
 
+        } catch (NumberFormatException | NullPointerException nfe) {
+            return true;
+        }
+        return false;
+    }
     public void tableCreate(View view) {
         //Recogemos los valores
+
         BD.TABLE_NAME = editNombre.getText().toString();
         BD.COL_2 = editApellidos.getText().toString();
         BD.COL_3 = editNota.getText().toString();
         BD.COL_4 = editExtra.getText().toString();
-        //Creamos la tabla
-        myBd.createTable(BD.TABLE_NAME,BD.COL_1,BD.COL_2,BD.COL_3,BD.COL_4);
-        //Ocultamos lo que no sirve y mostramos lo que si
-        editExtra.setVisibility(View.INVISIBLE);
-        text4.setVisibility(View.INVISIBLE);
-        text1.setText(BD.COL_2);
-        text2.setText(BD.COL_3);
-        text3.setText(BD.COL_4);
-        //vaciamos los editText
-        editNombre.setText(null);
-        editApellidos.setText(null);
-        editNota.setText(null);
 
+        boolean b0 = isNotNumeric(BD.COL_2);
+        boolean b1 = isNotNumeric(BD.COL_3);
+        boolean b2 = isNotNumeric(BD.COL_4);
+        boolean b3 = isNotNumeric(BD.TABLE_NAME);
+        boolean c= true;
+        if(BD.COL_2.equals(BD.COL_3) || BD.COL_2.equals(BD.COL_4)|| BD.COL_3.equals(BD.COL_4)){
+            c=false;
+        }else if(BD.COL_2.isEmpty() || BD.COL_3.isEmpty()||BD.COL_4.isEmpty()||BD.TABLE_NAME.isEmpty()){
+            c=false;
+        }
 
+        if(b0&&b1&&b2&&b3){
+            //Creamos la tabla
+            if (c) {
+                myBd.createTable(BD.TABLE_NAME.toUpperCase(), BD.COL_1, BD.COL_2, BD.COL_3, BD.COL_4);
 
-        btnInsert.setVisibility(View.VISIBLE);
-        btnCreate.setVisibility(View.INVISIBLE);
+                //Ocultamos lo que no sirve y mostramos lo que si
+                editExtra.setVisibility(View.INVISIBLE);
+                text4.setVisibility(View.INVISIBLE);
+                text1.setText(BD.COL_2);
+                text2.setText(BD.COL_3);
+                text3.setText(BD.COL_4);
+                //vaciamos los editText
+                editNombre.setText(null);
+                editApellidos.setText(null);
+                editNota.setText(null);
 
+                btnInsert.setVisibility(View.VISIBLE);
+                btnCreate.setVisibility(View.INVISIBLE);
+            } else {
+                Toast.makeText(this, R.string.errEmpty, Toast.LENGTH_SHORT).show();
+            }
+        }else {
+            Toast.makeText(this, R.string.errNum, Toast.LENGTH_SHORT).show();
+
+        }
     }
 
     public void tableInsert() {
@@ -89,7 +117,7 @@ public class Activity2 extends AppCompatActivity {
                             editNombre.setText(null);
                             editApellidos.setText(null);
                             editNota.setText(null);
-                            }
+                        }
                         else
                             Toast.makeText(Activity2.this, R.string.insertNOK,Toast.LENGTH_SHORT).show();
                     }

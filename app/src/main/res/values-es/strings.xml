@@ -36,4 +36,7 @@
         <string name="insertOK">Datos añadidos correctamente</string>
         <string name="insertNOK">Error: Los datos no se han podido añadir</string>
 
+        <string name="errEmpty">Los valores no pueden quedar vacios, ni ser iguales</string>
+        <string name="errNum">Los valores no pueden ser solo numeros</string>
+
 </resources>

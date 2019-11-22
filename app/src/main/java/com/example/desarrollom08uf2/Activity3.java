@@ -38,10 +38,10 @@ Button b1,b2,b3,b4;
 
     public void playMusic(View view) {//empezar musica
         myService.musicPlayer();
-    }//Reproducir musica
+    }//Reproducir música
     public void stopMusic(View view) {//Parar musica
         myService.musicStopper();
-    }//Parar musica
+    }//Parar música
     public void freeze15(View view) { //SERVICIO DE BLOQUEO
         myService.musicFreeze();
     }    //Congelar app
@@ -51,7 +51,7 @@ Button b1,b2,b3,b4;
         Intent intent = new Intent(this,MyService.class);
         startService(intent);
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-        b1.setVisibility(View.VISIBLE);//Solo se muetran los botones mientras el servicio esta activo
+        b1.setVisibility(View.VISIBLE);//Solo se muestran los botones mientras el servicio esta activo
         b2.setVisibility(View.VISIBLE);
         b3.setVisibility(View.VISIBLE);
         b4.setVisibility(View.VISIBLE);

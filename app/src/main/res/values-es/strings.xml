@@ -4,7 +4,7 @@
         <string name="layout_1">Ir al ejercicio 1</string>
         <string name="layout_2">Ir al ejercicio 2</string>
         <string name="back">Atrás</string>
-        <string name="option">Por favor, elige una opcion</string>
+        <string name="option">Por favor, elige una opción</string>
 
         <string name="welcome">Bienvenido</string>
         <string name="welcome_1">Ejercicio 1</string>
@@ -36,7 +36,7 @@
         <string name="insertOK">Datos añadidos correctamente</string>
         <string name="insertNOK">Error: Los datos no se han podido añadir</string>
 
-        <string name="errEmpty">Los valores no pueden quedar vacios, ni ser iguales</string>
-        <string name="errNum">Los valores no pueden ser solo numeros</string>
+        <string name="errEmpty">Los valores no pueden quedar vacíos, ni ser iguales</string>
+        <string name="errNum">Los valores no pueden ser solo números</string>
 
 </resources>

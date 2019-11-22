@@ -45,7 +45,7 @@ public class Activity2 extends AppCompatActivity {
         startActivity(intent);
         finish();//cerrar esta pantalla
     }
-    public static boolean isNotNumeric(String strNum1) {//Comprobador de si la string es solo numeros
+    public static boolean isNotNumeric(String strNum1) {//Comprobador de si la string es solo números
         try {
             double d = Double.parseDouble(strNum1);
 
@@ -138,7 +138,7 @@ public class Activity2 extends AppCompatActivity {
                         }
 
                         StringBuilder buffer = new StringBuilder();
-                        while (result.moveToNext()){//Guarda el resultado aqui
+                        while (result.moveToNext()){//Guarda el resultado aquí
                             buffer.append(BD.COL_1).append(" :").append(result.getString(0)).append("\n");
                             buffer.append(BD.COL_2).append(" :").append(result.getString(1)).append("\n");
                             buffer.append(BD.COL_3).append(" :").append(result.getString(2)).append("\n");

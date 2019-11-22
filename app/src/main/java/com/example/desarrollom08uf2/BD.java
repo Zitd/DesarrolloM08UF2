@@ -14,7 +14,7 @@ public class BD extends SQLiteOpenHelper {
     static  String COL_3 = "Apellido";
     static  String COL_4 = "Nota";
 
-    BD(Context context) {//Esto servira para crear la base de datos
+    BD(Context context) {//Esto servirá para crear la base de datos
         super(context, DATABASE_NAME, null, 2);
     }
 

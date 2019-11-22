@@ -35,8 +35,8 @@
     <string name="insertOK">Data added correctly</string>
     <string name="insertNOK">Error: Data has not been added</string>
 
-    <string name="errEmpty">Values can not be empty, nor equal</string>
-    <string name="errNum">Values can not be just numbers</string>
+    <string name="errEmpty">Values cannot be empty, nor equal</string>
+    <string name="errNum">Values cannot be just numbers</string>
 
 
 </resources>
